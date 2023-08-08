@@ -1,6 +1,6 @@
 name: umeng_push_sdk
 description: upush sdk plugin.
-version: 2.1.0
+version: 2.1.0+1
 homepage: https://www.umeng.com/
 
 environment:
