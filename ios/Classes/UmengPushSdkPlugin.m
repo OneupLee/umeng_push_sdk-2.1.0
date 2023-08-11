@@ -13,7 +13,7 @@ NSDictionary *userInfoTemp = nil;
 
 @end
 
-static BOOL clearBagde = YES;
+static BOOL clearBagde = NO;
 
 
 @implementation UMengflutterpluginForPush : NSObject
