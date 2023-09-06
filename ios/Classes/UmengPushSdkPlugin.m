@@ -207,6 +207,13 @@ static BOOL clearBagde = NO;
             //删除角标但不清空通知中心
             clearBagde = YES;
         }
+        [UMessage setBadge:[arguments intValue] response:^(id  _Nullable responseObject, NSError * _Nullable error) {
+            if (responseObject) {
+                NSLog(@"setBadge success");
+            } else {
+                NSLog(@"setBadge fail");
+            }
+        }];
     }
     else{
         resultCode = NO;
