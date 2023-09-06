@@ -33,7 +33,7 @@ static BOOL clearBagde = NO;
         ////设置注册的参数，如果不需要自定义的特殊功能可以直接在registerForRemoteNotificationsWithLaunchOptions的Entity传入一个nil.
         UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
         //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
-        entity.types = UMessageAuthorizationOptionAlert|UMessageAuthorizationOptionSound;
+        entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert|UMessageAuthorizationOptionSound;
         //友盟推送的注册方法
         [UMessage registerForRemoteNotificationsWithLaunchOptions:nil Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
             if (granted) {
