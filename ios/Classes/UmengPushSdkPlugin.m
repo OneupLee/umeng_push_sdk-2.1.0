@@ -202,6 +202,7 @@ static BOOL clearBagde = NO;
     else if([@"setBadge" isEqualToString:call.method]){
         NSNumber* arguments = (NSNumber *)call.arguments;
         if([arguments intValue] !=0 ){
+            clearBagde = NO;
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[arguments intValue]];
         }else {
             //删除角标但不清空通知中心
