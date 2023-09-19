@@ -201,12 +201,14 @@ static BOOL clearBagde = NO;
     }
     else if([@"setBadge" isEqualToString:call.method]){
         NSNumber* arguments = (NSNumber *)call.arguments;
+        //删除角标但不清空通知中心
+        clearBagde = YES;
         if([arguments intValue] !=0 ){
-            clearBagde = NO;
+            // clearBagde = NO;
             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[arguments intValue]];
         }else {
             //删除角标但不清空通知中心
-            clearBagde = YES;
+            // clearBagde = YES;
         }
         [UMessage setBadge:[arguments intValue] response:^(id  _Nullable responseObject, NSError * _Nullable error) {
             if (responseObject) {
