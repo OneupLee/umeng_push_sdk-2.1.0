@@ -201,7 +201,7 @@ static BOOL clearBagde = NO;
     }
     else if([@"setBadge" isEqualToString:call.method]){
         NSNumber* arguments = (NSNumber *)call.arguments;
-        //删除角标但不清空通知中心
+        //设置角标但不清空通知中心
         clearBagde = YES;
         if([arguments intValue] !=0 ){
             // clearBagde = NO;
